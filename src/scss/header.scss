@@ -1,0 +1,71 @@
+@use "./reset.scss";
+
+body {
+  padding-top: 80px;
+}
+
+.header {
+  width: calc(100% - 40px);
+  top: 0;
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  .icon {
+    color: black;
+    font-size: 30px;
+    transition: 0.2s all ease-in-out;
+    &:active {
+      scale: 0.9;
+    }
+  }
+  .user-buttons {
+    display: flex;
+    gap: 35px;
+    .join,
+    .login {
+      box-shadow: 0 0 0 11px rgb(0, 0, 0);
+      background-color: black;
+      color: white;
+      border-radius: 2px;
+      font-size: 19px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.2s all ease-in-out;
+      &:hover {
+        box-shadow: 0 0 0 11px white;
+        background-color: white;
+        color: black;
+      }
+    }
+    .user-info {
+      display: flex;
+      gap: 25px;
+      .logout,
+      .create {
+        cursor: pointer;
+        box-shadow: 0 0 0 5px rgb(0, 0, 0);
+        background-color: black;
+        color: white;
+        border-radius: 2px;
+        text-decoration: none;
+        align-content: center;
+        font-size: 19px;
+        font-weight: bold;
+        border: none;
+        transition: 0.2s all ease-in-out;
+        &:hover {
+          box-shadow: 0 0 0 5px white;
+          background-color: white;
+          color: black;
+        }
+      }
+    }
+  }
+}

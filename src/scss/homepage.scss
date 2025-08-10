@@ -1,0 +1,85 @@
+@use "./reset.scss";
+
+.homepage {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  .note-card {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 25px;
+    border: 1px solid transparent;
+    color: black;
+    text-decoration: none;
+    gap: 10px;
+    &:hover {
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+    }
+    .title {
+      font-size: 25px;
+      font-weight: bold;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .content {
+      opacity: 0.7;
+      font-size: 18px;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .no-notes {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size: 40px;
+      font-weight: bold;
+    }
+    .create-note {
+      color: black;
+      text-decoration: none;
+      font-size: 30px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 8px;
+    button {
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      background-color: #fff;
+      cursor: pointer;
+      &:hover {
+        background-color: #f0f0f0;
+      }
+      &.active {
+        font-weight: bold;
+        color: #fff;
+        background-color: #333;
+        border-color: #333;
+      }
+    }
+  }
+}

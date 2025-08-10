@@ -1,0 +1,5 @@
+노트가 존재하지 않을때 context로 로그인 구별한뒤 로그인 한 사람만 노트 만들수 있게 하기
+
+미들웨어 만들기
+
+"C:\Program Files\MongoDB\Server\8.0\bin\mongod.exe" --dbpath "C:\data\db"

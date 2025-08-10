@@ -1,0 +1,49 @@
+@use "./reset.scss";
+
+.create-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .create-note {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      label {
+        font-size: 25px;
+        margin-bottom: 5px;
+      }
+      input {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        font-size: 2em;
+        &:focus {
+          border-color: black;
+          outline: none;
+        }
+      }
+    }
+    button {
+      cursor: pointer;
+      padding: 10px;
+      font-size: 1.5em;
+      font-weight: bold;
+      background-color: white;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      transition: 0.2s all ease-in-out;
+      &:hover {
+        background-color: black;
+        color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}

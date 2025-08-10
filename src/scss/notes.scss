@@ -1,0 +1,91 @@
+@use "./reset.scss";
+
+.note-container {
+  box-sizing: border-box;
+  height: calc(100vh - 60px);
+  padding: 30px;
+  .note {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .note-top {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      border-bottom: 1px solid black;
+      padding-bottom: 10px;
+
+      .note-top-header {
+        display: flex;
+        align-items: center;
+      }
+
+      .user {
+        display: inline;
+        font-size: 30px;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      span {
+        font-size: 30px;
+      }
+      .title {
+        font-size: 60px;
+        font-weight: bold;
+      }
+    }
+    .content {
+      font-size: 37px;
+      font-weight: 450;
+      opacity: 0.85;
+    }
+    .note-info-container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      .note-info {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .edit {
+          text-decoration: none;
+          color: black;
+          font-size: 22px;
+          font-weight: bold;
+          transition: 0.2s all ease-in-out;
+          &:hover {
+            color: white;
+            text-shadow: 0 0 10px rgb(50, 49, 49), 0 0 20px rgb(63, 63, 63),
+              0 0 30px rgba(38, 38, 38, 0.515), 0 0 40px black;
+          }
+        }
+        button {
+          cursor: pointer;
+          border: none;
+          font-size: 22px;
+          font-weight: bold;
+          transition: 0.2s all ease-in-out;
+          &:hover {
+            color: white;
+            text-shadow: 0 0 10px rgb(50, 49, 49), 0 0 20px rgb(63, 63, 63),
+              0 0 30px rgba(38, 38, 38, 0.515), 0 0 40px black;
+          }
+        }
+        .createdAt {
+          opacity: 0.5;
+          font-size: 22px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
