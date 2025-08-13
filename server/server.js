@@ -5,7 +5,6 @@ import session from "express-session";
 import MongoStore from "connect-mongo";
 import cors from "cors";
 import apiRouter from "./router/apiRouter.js";
-import noteRouter from "./router/noteRouter.js";
 
 dotenv.config();
 
